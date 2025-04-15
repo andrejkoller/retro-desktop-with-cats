@@ -1,0 +1,140 @@
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+  font-family: "VT323";
+  src: url("/src/assets/fonts/VT323-Regular.ttf") format("truetype");
+}
+
+body {
+  background-color: #e3dfaa;
+  color: #141414;
+  font-family: "VT323", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 44px 32px 0 32px;
+}
+
+.content .menu {
+  height: calc(100% - 64px);
+}
+
+.content .dialog-window-wrapper {
+  height: calc(100% - 64px);
+  width: 100%;
+}
+
+.content .menu .desktop-icons {
+  width: 5rem;
+}
+
+.link-icon {
+  width: 1rem;
+  margin-left: 0.5rem;
+}
+
+#portfolioDialog {
+  position: absolute;
+  right: 5vw;
+  bottom: 5vw;
+}
+
+#servicesDialog {
+  position: absolute;
+  left: 15vw;
+  bottom: 15vw;
+}
+
+#contactDialog {
+  position: absolute;
+  left: 5vw;
+  bottom: 5vw;
+}
+
+.content .dialog-window-wrapper .dialog-window {
+  background-color: #ededed;
+  padding: 0.4rem;
+  display: none;
+}
+
+.content .dialog-window-wrapper .dialog-window .dialog-header {
+  background-color: #eda6a6;
+  padding: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.content
+  .dialog-window-wrapper
+  .dialog-window
+  .dialog-header
+  .dialog-header-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.content
+  .dialog-window-wrapper
+  .dialog-window
+  .dialog-body
+  .services-description {
+  width: 25vw;
+}
+
+.content .dialog-window-wrapper .dialog-window .popup-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+  background-color: #ececec;
+  box-shadow: -2px -2px 0 0 #fff, 2px 2px 0 0 #a7a7a7;
+}
+
+.content .dialog-window-wrapper .dialog-window .dialog-body {
+  padding: 0.9rem 1.7rem;
+}
+
+.footer {
+  background-color: #ededed;
+}
+
+.footer .menu-button {
+  width: 8rem;
+  margin: 0rem 1rem;
+  padding: 0.25rem 0rem;
+  box-shadow: -3px -3px 0 0 #fff, 2px 2px 0 1px #a7a7a7;
+  font-weight: 400;
+}
+
+.footer .menu-button h3 {
+  font-size: 1.5rem;
+}
+
+.footer .footer-divider {
+  display: block;
+  width: 0.3rem;
+  min-height: 2rem;
+  background-color: #ececec;
+  box-shadow: inset -3px -3px 0 0 #fff, 2px 2px 0 0 #a7a7a7;
+}
+
+.footer .floating-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  text-align: center;
+}
