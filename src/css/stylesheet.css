@@ -1,5 +1,4 @@
 @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 @font-face {
   font-family: "VT323";
@@ -22,6 +21,39 @@ a {
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
+}
+
+.offscreen {
+  height: 100vh;
+  width: 100vw;
+  background-color: #141414;
+  z-index: 9999;
+  position: absolute;
+}
+
+.offscreen .offscreen-button-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offscreen .offscreen-button-wrapper a {
+  border: 1px solid #eca6a6;
+  background-color: #eca6a6;
+  color: #141414;
+  font-size: 1.75rem;
+  padding: 0.5rem 4rem;
+  border-radius: 9999px;
+}
+
+.offscreen .offscreen-button-wrapper a:hover {
+  background-color: #141414;
+  color: #eca6a6;
+  border: 1px solid #eca6a6;
 }
 
 .content {
@@ -110,6 +142,64 @@ a {
   background-color: #ededed;
 }
 
+.footer .footer-menu {
+  position: absolute;
+  left: 0%;
+  top: auto;
+  right: auto;
+  bottom: 98%;
+  display: none;
+  width: auto;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: #ececec;
+  box-shadow: inset 3px 2px 0 0 #fff, 2px 2px 0 0 #a7a7a7;
+  z-index: 9999;
+}
+
+.footer .footer-menu .start-strip {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: 0%;
+  display: flex;
+  width: 1.8rem;
+  height: auto;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  padding-left: 4px;
+  align-items: flex-end;
+  background-color: #eca6a6;
+}
+
+.footer .footer-menu .start-strip .text-block {
+  position: absolute;
+  transform: translate(0px, -10px) rotate(-90deg);
+}
+
+.footer .footer-menu .footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+.footer .footer-menu .footer-links:hover {
+  background-color: hsla(0, 0%, 65.3%, 0.74);
+}
+
+.footer .footer-menu .divider {
+  width: auto;
+  height: 0.25px;
+  background-color: #a7a7a7;
+}
+
+.footer .footer-menu .footer-links .footer-icon {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
 .footer .menu-button {
   width: 8rem;
   margin: 0rem 1rem;
@@ -137,4 +227,24 @@ a {
   transform: translate(-50%, -50%);
   font-size: 1.8rem;
   text-align: center;
+}
+
+.open {
+  display: block !important;
+}
+
+@media all and (max-width: 1024px) {
+  .footer .floating-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .footer .floating-text {
+    display: none;
+  }
+
+  .footer .footer-divider {
+    display: none;
+  }
 }

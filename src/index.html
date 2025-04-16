@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/stylesheet.css" />
   </head>
   <body>
+    <div class="offscreen" id="offScreen">
+      <div class="button-container">
+        <div class="offscreen-button-wrapper">
+          <a href="#" class="start-button" id="startButton">Meow!</a>
+        </div>
+      </div>
+    </div>
     <div
       class="content d-flex flex-row justify-content-between align-items-start h-100 w-100"
     >
@@ -192,11 +199,54 @@
     <div
       class="footer d-flex justify-content-between align-items-center fixed-bottom w-100 py-2"
     >
-      <div class="d-flex align-items-center ms-1">
-        <a href="#" class="menu-button d-flex flex-column align-items-center">
-          <h3 class="m-0">Menu</h3>
-        </a>
-        <div class="footer-divider"></div>
+      <div class="d-flex flex-column align-items-center ms-1">
+        <div class="footer-menu">
+          <div class="start-strip">
+            <div class="text-block">Meow</div>
+          </div>
+          <div class="footer-links">
+            <img
+              src="assets/images/portfolio-icon.png"
+              alt="portfolio-icon"
+              class="footer-icon"
+            />
+            <a href="#" class="open-dialog" data-target="portfolioDialog">
+              <h3 class="m-0">Portfolio</h3>
+            </a>
+          </div>
+          <div class="footer-links">
+            <img
+              src="assets/images/pencil-icon.png"
+              alt="services-icon"
+              class="footer-icon"
+            />
+            <a href="#" class="open-dialog" data-target="servicesDialog">
+              <h3 class="m-0">Services</h3>
+            </a>
+          </div>
+          <div class="footer-links">
+            <img
+              src="assets/images/envelope-icon.png"
+              alt="contact-icon"
+              class="footer-icon"
+            />
+            <a href="#" class="open-dialog" data-target="contactDialog">
+              <h3 class="m-0">Contact</h3>
+            </a>
+          </div>
+          <div class="divider"></div>
+          <div class="footer-links">
+            <a href="#" class="shutdown-btn" id="shutDownButton">
+              <h3 class="m-0">Shut down</h3>
+            </a>
+          </div>
+        </div>
+        <div class="d-flex">
+          <a href="#" class="menu-button d-flex flex-column align-items-center">
+            <h3 class="m-0">Menu</h3>
+          </a>
+          <div class="footer-divider"></div>
+        </div>
       </div>
       <div>
         <span class="floating-text">***cats be working hard too***</span>

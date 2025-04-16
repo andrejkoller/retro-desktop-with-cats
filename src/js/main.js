@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const initStarter = () => {
+    const startButton = document.getElementById("startButton");
+
+    startButton.addEventListener("click", (e) => {
+      const offScreen = document.getElementById("offScreen");
+      offScreen.style.opacity = "0";
+      offScreen.style.transition = "opacity 0.5s ease-in-out";
+      offScreen.style.zIndex = "0";
+      offScreen.style.pointerEvents = "none";
+    });
+  };
+
+  const initShutDown = () => {
+    const shutDownButton = document.getElementById("shutDownButton");
+
+    shutDownButton.addEventListener("click", () => {
+      const offScreen = document.getElementById("offScreen");
+      offScreen.style.opacity = "1";
+      offScreen.style.transition = "opacity 0.5s ease-in-out";
+      offScreen.style.zIndex = "1040";
+      offScreen.style.pointerEvents = "auto";
+    });
+  };
+
   const initDialogs = () => {
     const openButtons = document.querySelectorAll(".open-dialog");
     const closeButtons = document.querySelectorAll(".close-btn");
@@ -10,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const dialog = document.getElementById(targetId);
         if (dialog) {
           dialog.style.display = "block";
-          dialog.style.zIndex = "9999";
+          dialog.style.zIndex = "2";
         }
       });
     });
@@ -23,6 +47,18 @@ document.addEventListener("DOMContentLoaded", function () {
           dialog.style.display = "none";
         }
       });
+    });
+  };
+
+  const initFooterMenu = () => {
+    const menuButton = document.querySelector(".menu-button");
+
+    menuButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      const footerMenu = document.querySelector(".footer-menu");
+      if (footerMenu) {
+        footerMenu.classList.toggle("open");
+      }
     });
   };
 
@@ -63,6 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
       hours + ":" + minutes + ":" + seconds + meridiem;
   };
 
+  initStarter();
+  initShutDown();
   initDialogs();
+  initFooterMenu();
   setInterval(clock, 1000);
 });
